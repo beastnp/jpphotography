@@ -1,0 +1,640 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.static-top {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('http://3.bp.blogspot.com/-3TyG6y-EJEA/VEAA5euNCfI/AAAAAAAAEu4/YZVhZrZy_6w/s1600/webc5.jpg');
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main-title {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    line-height: 2;
+    font-size: 34px;
+    font-family: cursive;
+    color: pink;
+    font-variant: small-caps;
+}
+
+.main-title-transparent-bar {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    z-index: 2;
+    opacity: 0.3;
+    margin-top: 10px;
+}
+
+.static-top-transparent {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.nav-top,
+.nav-bottom {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 0px auto;
+    color: white;
+    background-color: grey;
+    margin-bottom: 50px;
+    border-top: 2px solid #FFC5C9;
+    border-bottom: 2px solid #FFC5C9;
+}
+
+.nav-bottom {
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+.nav-top ul {
+    text-align: center;
+    /*    float: right;*/
+    margin: 20px;
+}
+
+.nav-top ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+    padding: 10px;
+}
+
+.nav-top i {
+    color: #FFC5C9;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+
+/* Home Page */
+
+.home-greeting {
+    height: 600px;
+    width: 600px;
+    position: relative;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+.home-greeting img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+
+.home-greeting h1 {
+    color: white;
+    font-family: cursive;
+}
+
+.home-greeting p {
+    color: white;
+}
+
+
+/* Home page slider */
+
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+html,
+body {
+    background: #333 url("http://codepen.io/images/classy_fabric.png");
+}
+
+.slides {
+    padding: 0;
+    width: 1000px;
+    height: 800px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide-container {
+    display: block;
+}
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 1000px;
+    height: 800px;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+    line-height: 4;
+}
+
+.slide:hover + .nav label {
+    opacity: 0.5;
+}
+
+.nav label:hover {
+    opacity: 1;
+}
+
+.nav .next {
+    right: 0;
+}
+
+input:checked + .slide-container .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label {
+    display: block;
+}
+
+.nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.nav-dots .nav-dot {
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: pink;
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: hotpink;
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+    background: hotpink;
+}
+
+
+/* Portfolio Page */
+
+.portfolio-top-quote {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    font-size: 24px;
+    font-family: cursive;
+    padding-top: 10px;
+    color: white;
+}
+
+.portfolio-bar {
+    position: relative;
+    width: 80%;
+    margin: 0 auto 100px auto;
+    height: 100px;
+    background-color: grey;
+    z-index: 1;
+    border-radius: 60%;
+    border: 2px solid pink;
+}
+
+.engagements-header,
+.engagements-photo,
+.senior-header,
+.senior-photo,
+.newborn-header,
+.newborn-photo,
+.family-header,
+.family-photo,
+.bridal-header,
+.bridal-photo,
+.additional-disclosures {
+    position: relative;
+    margin: 0 auto;
+    height: 50px;
+    width: 60%;
+    color: white;
+}
+
+.family-header,
+.bridal-header {
+    height: 60px;
+}
+
+.engagements-photo,
+.senior-photo,
+.newborn-photo,
+.family-photo,
+.bridal-photo {
+    background: url("http://3.bp.blogspot.com/-HzjHiFNyCtk/U2bs7BgtzEI/AAAAAAAAEH8/BSxh7lckV7o/s1600/08web.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+.senior-photo {
+    background: url("http://3.bp.blogspot.com/-kBfGaa8hyGs/VD_h6qpnsyI/AAAAAAAAEto/F1QwAFiAj5M/s1600/saidweb5.jpg");
+    background-position: center;
+}
+
+.newborn-photo {
+    background: url("http://2.bp.blogspot.com/-8ulunxtn5sg/Vam0uFMBAqI/AAAAAAAAHTc/KuMzboUOIvw/s1600/hav3.jpg");
+    background-position: center;
+}
+
+.family-photo {
+    background: url("http://2.bp.blogspot.com/-fINSQHYdpH4/U2btz7s-xNI/AAAAAAAAEIg/JrV5cjiHD6U/s1600/wathan-web.jpg");
+    background-position: top;
+    height: 420px;
+}
+
+.bridal-photo {
+    background: url("http://3.bp.blogspot.com/-n2e0VfW0oX8/U1tBeAACC4I/AAAAAAAAEA4/AXLP9erDJ-Y/s1600/duobridal1.jpg");
+    background-position: center;
+}
+
+
+/* Contact Page */
+
+.contact-container {
+    position: relative;
+    margin: 0 auto;
+    height: 700px;
+    width: 90%;
+    background: url('https://static.pexels.com/photos/2318/vintage-technology-keyboard-old.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-bar {
+    height: 260px;
+    width: 100%;
+    position: absolute;
+    background-color: azure;
+    margin-top: 190px;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.contact-header h1,
+.contact-header h4 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 58px;
+    text-align: center;
+    margin-top: -5px;
+}
+
+.contact-header h4 {
+    font-size: 18px;
+    margin-top: -30px;
+}
+
+.username,
+.user-email,
+.email-subject,
+.email-compose,
+.submit-button {
+    height: 30px;
+    width: 60%;
+    margin: 5px 20%;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    padding-left: 5px;
+}
+
+.email-compose {
+    padding-top: 10px;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+    padding-left: 5px;
+}
+
+.email-compose {
+    height: 300px;
+}
+
+.submit-button {
+    width: 20%;
+}
+
+.contact-bar {
+    width: 100%;
+    height: 700px;
+    margin: 0;
+    opacity: 0.3;
+    background-color: black;
+}
+
+.contact-header {
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    color: white;
+}
+
+.email-form {
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    margin-top: 160px;
+}
+
+
+/* Login Page */
+
+.register-form {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    background: transparent;
+    z-index: 10;
+    margin-top: 120px;
+}
+
+.login-text {
+    position: relative;
+    margin: 100px auto 0 auto;
+    width: 80%;
+    font-family: cursive;
+    font-size: 18px;
+}
+
+.facebook-register {
+    color: black;
+    margin-top: 50px;
+    height: 50px;
+    background-color: #3A5795;
+    color: white;
+}
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+#slider {
+    overflow: hidden;
+    margin-top: -624px;
+    margin-bottom: -100px;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+#slider figure img {
+    width: 20%;
+    float: left;
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    height: 100%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite;
+}
+
+/*
+.register-name,
+.register-email,
+.register-telephone,
+.register-password,
+.login-email,
+.login-password {
+    height: 30px;
+    width: 60%;
+    margin: 5px 20%;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    padding-left: 5px;
+    color: black;
+}
+
+.register-submit,
+.login-submit {
+    background: transparent;
+}
+
+.register-wrap,
+.login-wrap {
+    margin-top: 20px;
+}
+*/
+
+/* Admin Pages */
+
+.admin-wrapper,
+.shoot-wrapper {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.admin-wrapper button {
+    /*
+    border: 2px solid pink;
+    color: white;
+*/
+}
+
+.admin-shoots-list img {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+.name-list {
+    margin-bottom: -10px;
+}
+
+.admin-users-list,
+.shoot-wrapper {
+    background-color: grey;
+    padding: 10px 20px;
+}
+
+.admin-user-info input {
+    width: 500px;
+    background: white;
+}
+
+.name-input {
+    margin-left: 100px;
+}
+
+.email-input {
+    margin-left: 98px;
+}
+
+.admin-input {
+    margin-left: 48px;
+}
+
+.update-user-form {
+    margin: 20px 0px;
+}
+
+.delete-user-button {
+    background-color: black;
+    color: red;
+}
+
+.create-shoot-form {
+    width: 100%;
+}
+
+.admin-shoots-list h3 {
+    margin-bottom: -30px;
+}
+
+.new-shoot-photo-array {
+    font-size: 14px;
+    color: white;
+}
+
+
+/* Users Page */
+
+.user-header {
+    position: relative;
+    width: 90%;
+    margin: 0 auto 50px auto;
+}
+
+#logout-button a {
+    text-decoration: none;
+    color: pink;
+}
+
+#logout-button a:visited {
+    color: pink;
+}
+
+#logout-button {
+    background-color: grey;
+}
+
+.user-header {
+    color: white;
+}
+
+.current-user {
+    background-color: black;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+}
+
+.user-shoot-info {
+    margin: 0px 50px;
+    cursor: pointer;
+}
+
+.user-shoot-info h2 {
+    padding-top: 20px;
+}
+
+.current-user-photos {
+    margin: 30px 10px;
+    height: 200px;
+    width: auto;
+    overflow: hidden;
+    border: 10px solid;
+    border-top-color: #856036;
+    border-left-color: #5d4426;
+    border-bottom-color: #856036;
+    border-right-color: #5d4426;
+    position: relative;
+}
+
+
+}

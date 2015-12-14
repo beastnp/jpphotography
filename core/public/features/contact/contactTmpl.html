@@ -1,0 +1,23 @@
+<div class="contact-container">
+    
+    <div class="contact-bar"></div>
+
+    <div class="contact-header">
+       <br>
+        <h1>Contact Me</h1>
+        <h4>Please feel free to contact me for session information and booking!</h4>
+    </div>
+
+    <form class="email-form">
+        <input class="username" type="text" ng-model="email.username" placeholder="Your Name" required></input>
+        <br>
+        <input class="user-email" type="text" ng-model="email.userEmail" placeholder="Your E-Mail Address" required></input>
+        <br>
+        <input class="email-subject" type="text" ng-model="email.emailSubject" placeholder="Subject" required></input>
+        <br>
+        <textarea class="email-compose" ng-model="email.emailCompose" placeholder="Your Message" required></textarea>
+        <br>
+        <button class="submit-button" ng-click="submit()">Send</button>
+    </form>
+
+</div>

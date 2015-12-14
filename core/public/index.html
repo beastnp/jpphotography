@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="jppApp">
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <title>Jordan Peterson Photography</title>
+</head>
+
+<body>
+
+    <div class="static-top">
+        <div class="main-title">Jordan Peterson Photography</div>
+        <div class="main-title-transparent-bar"></div>
+        <div class="static-top-transparent"></div>
+    </div>
+
+    <div class="nav-top">
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/JordanPPhotography"><i class="fa fa-facebook-square fa-lg"></i>
+            </li></a>
+                <li>
+                    <a href="https://www.instagram.com/jordanpphotographyllc/"><i class="fa fa-instagram fa-lg"></i>
+            </li></a>
+                    <li>
+                        <a href="/#/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/#/portfolio-pricing">Portfolio and Pricing</a>
+                    </li>
+                    <li>
+                        <a href="/#/login">Login</a>
+                    </li>
+                    <li>
+                        <a href="/#/contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="https://www.pinterest.com/jordanwpeterson/"><i class="fa fa-pinterest-square fa-lg"></i>
+            </a></li>
+
+                    <li>
+                        <a href="mailto:jordan_peterson09@icloud.com"><i class="fa fa-envelope fa-lg"></i></a>
+                    </li>
+        </ul>
+    </div>
+
+    <div ui-view class="router-view"></div>
+
+    <div class="nav-bottom"></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-cookies.js"></script>
+
+
+    <!-- App -->
+
+    <script src="app.js"></script>
+    <script src="features/home/homeCtrl.js"></script>
+    <script src="features/contact/contactCtrl.js"></script>
+    <script src="features/login/loginCtrl.js"></script>
+    <script src="features/portfolio/portfolioCtrl.js"></script>
+    <script src="features/users/usersCtrl.js"></script>
+    <script src="features/users/usersService.js"></script>
+    <script src="features/admin/adminCtrl.js"></script>
+    <script src="features/admin-updates/adminUpdatesCtrl.js"></script>
+    
+    <script src="services/mainService.js"></script>
+    <script src="services/keysService.js"></script>
+    <script src="services/shootsService.js"></script>
+    
+    <script src="directives/shootsDirective.js"></script>
+
+</body>
+
+</html>

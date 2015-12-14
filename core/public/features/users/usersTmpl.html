@@ -1,0 +1,22 @@
+<div class="user-header">
+    <h1>Welcome {{user.clientName}}!</h1>
+    <button id="logout-button"><a href="/api/logout">Logout</a></button>
+    <br>
+    <br>
+</div>
+
+<div class="shoot-wrapper">
+   Search Photo Shoots: <input ng-model="searchTerm" placeholder="Search Photo Shoots">
+    <div ng-repeat="shoot in user.shoots | filter: searchTerm" class="current-user">
+        <div class="user-shoot-info" ng-click="showPhotos(shoot)">
+            <h2>Album Name: {{shoot.shootName}}</h2>
+            <h3>Date: {{shoot.createdAt | date: longDate}}</h3>
+            <br>
+        </div>
+        <div>
+            <img ng-show="shoot.display" ng-repeat="photo in shoot.photos" src="{{photo}}" class="current-user-photos">
+        </div>
+        <br>
+    </div>
+
+</div>

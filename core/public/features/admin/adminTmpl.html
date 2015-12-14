@@ -1,0 +1,24 @@
+<div class="admin-wrapper">
+
+    <button id="logout-button"><a href="/api/logout">Logout</a></button>
+    <br>
+    <br>
+    <div class="admin-users-list">
+        Search Users: <input ng-model="searchTerm" placeholder="Search Users">
+        <div ng-repeat="user in users | filter: searchTerm" class="admin-user-info">
+            <form class="user-info-box">
+                <h2 class="name-list">{{ user.clientName }}</h2>
+                <br> E-mail: {{ user.email}}
+                <br>
+                <br>
+                <button ui-sref="users({id: user._id})">Go To User's Home Page</button>
+                <button ui-sref="admin-updates({id: user._id})">User Info</button>
+                <button class="delete-user-button" ng-click="deleteUser(user)">Delete User</button>
+                <br>
+                <br>
+            </form>
+
+        </div>
+
+
+    </div>

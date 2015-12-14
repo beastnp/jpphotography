@@ -1,0 +1,105 @@
+<div class="admin-wrapper">
+
+    <button id="logout-button"><a href="/api/logout">Logout</a></button>
+    <button id="logout-button"><a href="/#/admin">Admin Home</a></button>
+    <br>
+    <br>
+    <div class="admin-users-list">
+        <div class="admin-user-info">
+            <form class="user-info-box">
+                <h2>User Info</h2> Name: {{ user.clientName }}
+                <br> E-mail: {{ user.email}}
+                <br> Admin Status: {{ user.admin}}
+                <br> ID: {{ user._id }}
+                <br>
+                <br>
+                <button ui-sref="users({id: user._id})">Go To User's Page</button>
+                <br>
+                <br>
+                <button ng-click="showHide()">Update User</button>
+                <br>
+                <br>
+            </form>
+
+            <form class="update-user-form" ng-show="showForm">
+                Name:
+                <input class="name-input" ng-model="user.clientName" type="text" placeholder="Name...">
+                <br> E-mail:
+                <input class="email-input" ng-model="user.email" type="text" placeholder="E-mail...">
+                <br> Admin Status:
+                <input class="admin-input" ng-model="user.admin" type="boolean">
+                <br>
+                <br>
+                <button ng-click="updateUser(user)">Submit Update</button>
+            </form>
+
+
+
+        </div>
+
+        <br>
+        <br>
+        <h2>Photo Shoots Info</h2>
+        <div ng-repeat="shoot in user.shoots" class="admin-shoots-list">
+            <h3>{{ shoot.shootName }}</h3>
+            <br>
+            <h4>{{shoot.createdAt | date: longDate}}</h4>
+            <button class="delete-user-button" ng-click="deleteShoot(shoot)">Delete Shoot</button>
+            <br> <img ng-repeat="photo in shoot.photos" src="{{photo}}">
+        </div>
+
+
+        <div class="create-shoot-form">
+
+            <div class="alignment">
+                <h1>Add new photoshoot for {{user.clientName}}</h1>
+                <div class="form-style-3">
+                    <form>
+                        <fieldset>
+                            <br>
+                            <label for="field1">Client Name:
+                                <input ng-model="newShoot.clientName" placeholder="{{user.clientName}}">
+                            </label>
+                            <br>
+                            <br>
+                            <label for="field2"><span>Shoot Name:<span></span></span>
+                                <input type="text" class="input-field" name="field2" ng-model="newShoot.shootName" />
+                            </label>
+                            <label for="field3"><span>Style:</span>
+                                <select name="field3" class="select-field" ng-model="newShoot.style">
+                                    <option value="Engagement">Engagement</option>
+                                    <option value="Senior/Portrait">Senior/Portrait</option>
+                                    <option value="Newborn">Newborn</option>
+                                    <option value="Family">Family</option>
+                                    <option value="Bridal/Groomal">Bridal/Groomal</option>
+                                </select>
+                            </label>
+                            <br>
+                        </fieldset>
+                        <fieldset>
+                            <br>
+                            <div>
+                                <label for="field5"><span>Upload Images:</span>
+                                    <input ng-model="photo" />
+                                    <button ng-click="addPhoto(photo)">Add</button>
+                                    <br>
+                                    <br>
+                                    <div class="new-shoot-photo-array" ng-repeat="photo in newShoot.photos track by $index">{{photo}}</div>
+                            </div>
+                            <br>
+                            <label for="field6"><span>Notes:</span>
+                                <textarea name="field6" class="textarea-field" ng-model="newShoot.notes"></textarea>
+                            </label>
+                            <label><span></span>
+                                <button ng-click="createShoot()">Submit Shoot</button>
+                            </label>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
